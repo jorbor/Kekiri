@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 namespace Kekiri.IoC
 {
-    public abstract class Container
+    public abstract class Container : IDisposable
     {
         private readonly List<object> _fakes = new List<object>();
         private bool _registrationClosed;
@@ -59,6 +59,10 @@ namespace Kekiri.IoC
             _registrationClosed = true;
 
             return OnResolve<T>();
+        }
+
+        public virtual void Dispose()
+        {
         }
     }
 }
