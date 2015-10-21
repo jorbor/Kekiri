@@ -1,5 +1,4 @@
-﻿using System;
-using FluentAssertions;
+﻿using FluentAssertions;
 using Kekiri;
 using Kekiri.IoC.SimpleInjector;
 using Moq;
